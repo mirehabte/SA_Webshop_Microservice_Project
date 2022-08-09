@@ -8,6 +8,6 @@ public interface CustomerService {
     void add(CustomerDTO customerDTO);
     void delete(long customerNumber);
     void update(long customerNumber, CustomerDTO customerDTO);
-    CustomerDTO getCustomer();
+    CustomerDTO getCustomer(long customerNumber);
     Collection<CustomerDTO> getAllCustomers();
 }
