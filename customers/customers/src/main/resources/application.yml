@@ -1,6 +1,6 @@
 server:
   port: 8081
-
+  
 spring:
   application:
     name: CustomerService
@@ -19,7 +19,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/,
-                   http://localhost:8762/eureka/
+        http://localhost:8762/eureka/
 sleuth:
   sampler:
     probability: 1 #100% (default = 10%)
