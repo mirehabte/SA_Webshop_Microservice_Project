@@ -10,14 +10,12 @@ public class CustomerAdapter {
 
     public static Customer getCustomerFromCustomerDTO(CustomerDTO customerDTO){
         return new Customer(customerDTO.getCustomerNumber(), customerDTO.getName(),
-                AddressAdapter.getAddressFromAddressDTO(customerDTO.getAddressDTO()),
-               ContactAdapter.getContactFromContactDTO(customerDTO.getContactDTO()));
+               customerDTO.getAddress(), customerDTO.getContact());
     }
 
     public static CustomerDTO getCustomerDTOFromCustomer(Customer customer){
         return new CustomerDTO(customer.getCustomerNumber(), customer.getName(),
-                AddressAdapter.getAddressDTOFromAddress(customer.getAddress()),
-                ContactAdapter.getContactDTOFromContact(customer.getContact()));
+               customer.getAddress(), customer.getContact());
     }
 
     public static Collection<CustomerDTO> getCustomerDTOListFromCustomerList(List<Customer> customerList){

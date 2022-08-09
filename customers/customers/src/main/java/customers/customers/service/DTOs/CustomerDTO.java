@@ -1,18 +1,21 @@
 package customers.customers.service.DTOs;
 
+import customers.customers.domain.Address;
+import customers.customers.domain.Contact;
+
 public class CustomerDTO {
     private long customerNumber;
     private String name;
-    private AddressDTO addressDTO;
-    private ContactDTO contactDTO;
+    private Address address;
+    private Contact contact;
 
     public CustomerDTO(){}
 
-    public CustomerDTO(long customerNumber, String name, AddressDTO addressDTO, ContactDTO contactDTO) {
+    public CustomerDTO(long customerNumber, String name, Address address, Contact contact) {
         this.customerNumber = customerNumber;
         this.name = name;
-        this.addressDTO = addressDTO;
-        this.contactDTO = contactDTO;
+        this.address = address;
+        this.contact = contact;
     }
 
     public long getCustomerNumber() {
@@ -31,20 +34,20 @@ public class CustomerDTO {
         this.name = name;
     }
 
-    public AddressDTO getAddressDTO() {
-        return addressDTO;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAddressDTO(AddressDTO addressDTO) {
-        this.addressDTO = addressDTO;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
-    public ContactDTO getContactDTO() {
-        return contactDTO;
+    public Contact getContact() {
+        return contact;
     }
 
-    public void setContactDTO(ContactDTO contactDTO) {
-        this.contactDTO = contactDTO;
+    public void setContact(Contact contact) {
+        this.contact = contact;
     }
 
     @Override
@@ -52,8 +55,8 @@ public class CustomerDTO {
         return "Customer{" +
                 "customerNumber=" + customerNumber +
                 ", name='" + name + '\'' +
-                ", address=" + addressDTO +
-                ", contact=" + contactDTO +
+                ", address=" + address +
+                ", contact=" + contact +
                 '}';
     }
 }
