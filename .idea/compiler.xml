@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="EurekaServer" />
-        <module name="EurekaServer (1)" />
         <module name="customers" />
+        <module name="cloudgateway" />
+        <module name="EurekaServer (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloudgateway" target="11" />
       <module name="customers" target="11" />
       <module name="EurekaServer" target="11" />
       <module name="EurekaServer (1)" target="11" />
@@ -21,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="EurekaServer" options="-parameters" />
       <module name="EurekaServer (1)" options="-parameters" />
+      <module name="cloudgateway" options="-parameters" />
       <module name="customers" options="-parameters" />
     </option>
   </component>
