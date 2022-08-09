@@ -10,10 +10,10 @@ spring:
         uri: lb://CustomerService
         predicates:
         - Path=/customers/**
-#      - id: ProductService
-#        uri: lb://ProductService
-#        predicates:
-#        - Path=/product/**
+      - id: ProductService
+        uri: lb://ProductService
+        predicates:
+        - Path=/products/**
             
 server:
   port: 8080
