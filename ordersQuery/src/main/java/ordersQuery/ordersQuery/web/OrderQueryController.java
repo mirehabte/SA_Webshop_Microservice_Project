@@ -1,8 +1,8 @@
 package ordersQuery.ordersQuery.web;
 
 
-import ordersQuery.ordersQuery.service.DTOs.OrderDTO;
-import ordersQuery.ordersQuery.service.DTOs.OrdersDTO;
+import ordersQuery.ordersQuery.kafka.OrderDTO;
+import ordersQuery.ordersQuery.kafka.OrdersDTO;
 import ordersQuery.ordersQuery.service.OrderQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

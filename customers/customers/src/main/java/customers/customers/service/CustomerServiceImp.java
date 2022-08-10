@@ -1,6 +1,7 @@
 package customers.customers.service;
 
 import customers.customers.domain.Customer;
+import customers.customers.integration.kafka.Sender;
 import customers.customers.repository.CustomerRepository;
 import customers.customers.service.DTOs.CustomerAdapter;
 import customers.customers.service.DTOs.CustomerDTO;
@@ -17,11 +18,15 @@ public class CustomerServiceImp implements CustomerService{
     @Autowired
     CustomerRepository customerRepository;
 
+    @Autowired
+    Sender sender;
 
     @Override
     public void add(CustomerDTO customerDTO) {
         Customer customer = CustomerAdapter.getCustomerFromCustomerDTO(customerDTO);
         customerRepository.save(customer);
+        sender.send(CustomerAdapter.getCustomerDTOFromCustomer(customer));
+        System.out.println("Sending "+ customer);
     }
 
     @Override
@@ -35,6 +40,8 @@ public class CustomerServiceImp implements CustomerService{
         if (optionalCustomer.isPresent()){
             Customer customer = CustomerAdapter.getCustomerFromCustomerDTO(customerDTO);
             customerRepository.save(customer);
+            sender.send(CustomerAdapter.getCustomerDTOFromCustomer(customer));
+            System.out.println("Sending "+ customer);
         }
     }
 

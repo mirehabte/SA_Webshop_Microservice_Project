@@ -1,6 +1,6 @@
 package ordersCommand.ordersCommand.web;
 
-import ordersCommand.ordersCommand.service.DTOs.OrderDTO;
+import ordersCommand.ordersCommand.kafka.OrderDTO;
 import ordersCommand.ordersCommand.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package ordersCommand.ordersCommand.service.DTOs;
+package ordersCommand.ordersCommand.kafka;
 
 import ordersCommand.ordersCommand.domain.Customer;
 import ordersCommand.ordersCommand.domain.Product;

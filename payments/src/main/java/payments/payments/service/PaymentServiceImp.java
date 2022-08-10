@@ -3,6 +3,7 @@ package payments.payments.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import payments.payments.domain.Payment;
+import payments.payments.integration.kafka.Sender;
 import payments.payments.repository.PaymentRepository;
 import payments.payments.service.DTOs.PaymentAdapter;
 import payments.payments.service.DTOs.PaymentDTO;
@@ -16,6 +17,9 @@ public class PaymentServiceImp implements PaymentService{
 
     @Autowired
     PaymentRepository paymentRepository;
+
+    @Autowired
+    Sender sender;
 
     @Override
     public void add(PaymentDTO paymentDTO) {
@@ -33,6 +37,8 @@ public class PaymentServiceImp implements PaymentService{
         Optional<Payment> optionalPayment = paymentRepository.findById(paymentNumber);
         if(optionalPayment.isPresent()){
             paymentRepository.save(PaymentAdapter.getPaymentFromPaymentDTO(paymentDTO));
+            sender.send(paymentDTO);
+            System.out.println("Sending "+paymentDTO);
         }
     }
 

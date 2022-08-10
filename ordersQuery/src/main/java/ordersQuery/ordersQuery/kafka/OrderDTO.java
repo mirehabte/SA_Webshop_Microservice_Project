@@ -1,4 +1,4 @@
-package ordersQuery.ordersQuery.service.DTOs;
+package ordersQuery.ordersQuery.kafka;
 
 import ordersQuery.ordersQuery.domain.Customer;
 import ordersQuery.ordersQuery.domain.Product;

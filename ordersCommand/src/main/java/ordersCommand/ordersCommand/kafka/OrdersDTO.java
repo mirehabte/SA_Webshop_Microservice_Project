@@ -1,4 +1,4 @@
-package ordersCommand.ordersCommand.service.DTOs;
+package ordersCommand.ordersCommand.kafka;
 
 import java.util.ArrayList;
 import java.util.Collection;

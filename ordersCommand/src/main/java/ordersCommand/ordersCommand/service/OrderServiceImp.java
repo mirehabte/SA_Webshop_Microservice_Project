@@ -3,9 +3,10 @@ package ordersCommand.ordersCommand.service;
 import ordersCommand.ordersCommand.domain.Customer;
 import ordersCommand.ordersCommand.domain.Order;
 import ordersCommand.ordersCommand.domain.Product;
+import ordersCommand.ordersCommand.kafka.Sender;
 import ordersCommand.ordersCommand.repository.OrderRepository;
-import ordersCommand.ordersCommand.service.DTOs.OrderAdapter;
-import ordersCommand.ordersCommand.service.DTOs.OrderDTO;
+import ordersCommand.ordersCommand.kafka.OrderAdapter;
+import ordersCommand.ordersCommand.kafka.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,16 +21,27 @@ public class OrderServiceImp implements OrderService{
     @Autowired
     OrderRepository orderRepository;
 
+    @Autowired
+    Sender sender;
+
     @Override
     public OrderDTO add(OrderDTO orderDTO) {
         Order order = createOrder(orderDTO);
         orderRepository.save(order);
+        sender.send(OrderAdapter.getOrderDTOFromOrder(order));
+        System.out.println("Sending "+order);
         return OrderAdapter.getOrderDTOFromOrder(order);
     }
 
     @Override
     public void delete(long orderNumber) {
-        orderRepository.deleteById(orderNumber);
+        Order order = orderRepository.findById(orderNumber).get();
+        if(order == null){
+            System.out.println("Order with "+orderNumber+" not found.");
+        }
+        sender.sendDeleteOrder(OrderAdapter.getOrderDTOFromOrder(order));
+        System.out.println("Sending to delete "+order);
+        orderRepository.delete(order);
     }
 
     @Override
@@ -38,6 +50,8 @@ public class OrderServiceImp implements OrderService{
         if(optionalOrder.isPresent()){
             Order order = OrderAdapter.getOrderFromOrderDTO(orderDTO);
             orderRepository.save(order);
+            sender.send(OrderAdapter.getOrderDTOFromOrder(order));
+            System.out.println("Sending "+order);
         }
     }
     @Override
@@ -64,7 +78,7 @@ public class OrderServiceImp implements OrderService{
         }
         Order newOrder = new Order(order.getOrderNumber(), order.getDate(), totalPrice,
                 productList, newCustomer);
-        newOrder.setPrice(totalPrice);
+//        newOrder.setPrice(totalPrice);
         return newOrder;
     }
 

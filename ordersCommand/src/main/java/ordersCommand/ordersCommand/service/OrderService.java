@@ -1,8 +1,6 @@
 package ordersCommand.ordersCommand.service;
 
-import ordersCommand.ordersCommand.service.DTOs.OrderDTO;
-
-import java.util.Collection;
+import ordersCommand.ordersCommand.kafka.OrderDTO;
 
 public interface OrderService {
     OrderDTO add(OrderDTO orderDTO);

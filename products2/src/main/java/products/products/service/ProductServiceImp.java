@@ -2,6 +2,7 @@ package products.products.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import products.products.integration.kafka.Sender;
 import products.products.domain.Product;
 import products.products.repository.ProductRepository;
 import products.products.service.DTOs.ProductAdapter;
@@ -17,10 +18,14 @@ public class ProductServiceImp implements ProductService {
     @Autowired
     ProductRepository productRepository;
 
+    @Autowired
+    Sender sender;
+
     @Override
     public void add(ProductDTO productDTO) {
        Product product = ProductAdapter.getProductFromProductDTO(productDTO);
        productRepository.save(product);
+       sender.send(ProductAdapter.getProductDTOFromProduct(product));
     }
 
     @Override
@@ -34,6 +39,7 @@ public class ProductServiceImp implements ProductService {
         if(optionalProduct.isPresent()){
             Product product = ProductAdapter.getProductFromProductDTO(productDTO);
             productRepository.save(product);
+            sender.send(ProductAdapter.getProductDTOFromProduct(product));
         }
     }
 

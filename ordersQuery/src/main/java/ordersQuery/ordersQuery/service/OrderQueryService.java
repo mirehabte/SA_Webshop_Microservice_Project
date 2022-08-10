@@ -1,6 +1,6 @@
 package ordersQuery.ordersQuery.service;
 
-import ordersQuery.ordersQuery.service.DTOs.OrderDTO;
+import ordersQuery.ordersQuery.kafka.OrderDTO;
 
 import java.util.Collection;
 

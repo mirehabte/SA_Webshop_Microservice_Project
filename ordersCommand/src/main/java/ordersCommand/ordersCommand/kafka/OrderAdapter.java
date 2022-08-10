@@ -1,7 +1,7 @@
-package ordersQuery.ordersQuery.service.DTOs;
+package ordersCommand.ordersCommand.kafka;
 
+import ordersCommand.ordersCommand.domain.Order;
 
-import ordersQuery.ordersQuery.domain.Order;
 
 import java.util.ArrayList;
 import java.util.Collection;

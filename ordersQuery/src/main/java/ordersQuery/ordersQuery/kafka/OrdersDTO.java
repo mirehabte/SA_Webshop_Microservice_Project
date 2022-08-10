@@ -1,4 +1,4 @@
-package ordersQuery.ordersQuery.service.DTOs;
+package ordersQuery.ordersQuery.kafka;
 
 import java.util.ArrayList;
 import java.util.Collection;

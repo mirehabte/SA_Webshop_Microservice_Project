@@ -2,8 +2,8 @@ package ordersQuery.ordersQuery.service;
 
 import ordersQuery.ordersQuery.domain.Order;
 import ordersQuery.ordersQuery.repository.OrderRepository;
-import ordersQuery.ordersQuery.service.DTOs.OrderAdapter;
-import ordersQuery.ordersQuery.service.DTOs.OrderDTO;
+import ordersQuery.ordersQuery.kafka.OrderAdapter;
+import ordersQuery.ordersQuery.kafka.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
