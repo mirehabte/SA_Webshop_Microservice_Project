@@ -18,6 +18,10 @@ spring:
         uri: lb://PaymentService
         predicates:
           - Path=/payments/**
+      - id: OrderService
+        uri: lb://OrderService
+        predicates:
+          - Path=/orders/**
             
 server:
   port: 8080
