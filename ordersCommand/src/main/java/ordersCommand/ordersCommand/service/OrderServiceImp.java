@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,7 +40,6 @@ public class OrderServiceImp implements OrderService{
             orderRepository.save(order);
         }
     }
-
     @Override
     public OrderDTO getOrder(long orderNumber) {
         Order order = orderRepository.findById(orderNumber).get();
@@ -51,11 +49,6 @@ public class OrderServiceImp implements OrderService{
         return OrderAdapter.getOrderDTOFromOrder(order);
     }
 
-    @Override
-    public Collection<OrderDTO> getAllOrders() {
-        List<Order> orders = orderRepository.findAll();
-        return OrderAdapter.getOrderDTOListFromOrderList(orders);
-    }
 
     public Order createOrder(OrderDTO orderDTO){
         List<Product> productList = new ArrayList<>();

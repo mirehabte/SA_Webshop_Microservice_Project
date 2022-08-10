@@ -11,6 +11,7 @@
         <module name="EurekaServer (1)" />
         <module name="payments" />
         <module name="customers" />
+        <module name="ordersQuery" />
         <module name="ConfigServer2" />
         <module name="products" />
         <module name="products (1)" />
@@ -24,6 +25,7 @@
       <module name="EurekaServer" target="11" />
       <module name="EurekaServer (1)" target="11" />
       <module name="ordersCommand" target="11" />
+      <module name="ordersQuery" target="11" />
       <module name="payments" target="11" />
       <module name="products" target="11" />
       <module name="products (1)" target="11" />
@@ -37,6 +39,7 @@
       <module name="cloudgateway" options="-parameters" />
       <module name="customers" options="-parameters" />
       <module name="ordersCommand" options="-parameters" />
+      <module name="ordersQuery" options="-parameters" />
       <module name="payments" options="-parameters" />
       <module name="products" options="-parameters" />
       <module name="products (1)" options="-parameters" />

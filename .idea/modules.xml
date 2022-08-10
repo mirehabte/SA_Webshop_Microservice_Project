@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/WebshopApiGateway/cloudgateway.iml" filepath="$PROJECT_DIR$/WebshopApiGateway/cloudgateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/customers/customers/customers.iml" filepath="$PROJECT_DIR$/customers/customers/customers.iml" />
       <module fileurl="file://$PROJECT_DIR$/ordersCommand/ordersCommand.iml" filepath="$PROJECT_DIR$/ordersCommand/ordersCommand.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ordersQuery/ordersQuery.iml" filepath="$PROJECT_DIR$/ordersQuery/ordersQuery.iml" />
       <module fileurl="file://$PROJECT_DIR$/payments/payments.iml" filepath="$PROJECT_DIR$/payments/payments.iml" />
       <module fileurl="file://$PROJECT_DIR$/products/products.iml" filepath="$PROJECT_DIR$/products/products.iml" />
       <module fileurl="file://$PROJECT_DIR$/products2/products (1).iml" filepath="$PROJECT_DIR$/products2/products (1).iml" />

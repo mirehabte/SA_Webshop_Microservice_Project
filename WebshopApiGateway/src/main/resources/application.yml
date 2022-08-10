@@ -21,6 +21,10 @@ spring:
       - id: OrderService
         uri: lb://OrderService
         predicates:
+          - Path=/order/**
+      - id: OrderQueryService
+        uri: lb://OrderQueryService
+        predicates:
           - Path=/orders/**
             
 server:

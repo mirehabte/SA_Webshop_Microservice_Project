@@ -1,17 +1,16 @@
 package ordersCommand.ordersCommand.web;
 
 import ordersCommand.ordersCommand.service.DTOs.OrderDTO;
-import ordersCommand.ordersCommand.service.DTOs.OrdersDTO;
 import ordersCommand.ordersCommand.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collection;
+
 
 @RestController
-@RequestMapping("/orders")
+@RequestMapping("/order")
 public class OrderController {
     @Autowired
     OrderService orderService;
@@ -46,21 +45,4 @@ public class OrderController {
         return new ResponseEntity<OrderDTO>(orderDTO, HttpStatus.OK);
     }
 
-    @GetMapping("/{orderNumber}")
-    public ResponseEntity<?> getOrder(@PathVariable long orderNumber){
-        OrderDTO orderDTO = orderService.getOrder(orderNumber);
-        if(orderDTO == null) {
-            return new ResponseEntity<CustomErrorType>(
-                    new CustomErrorType("Order with : "+orderNumber+" not found !"),
-                    HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<OrderDTO>(orderDTO, HttpStatus.OK);
-    }
-
-    @GetMapping
-    public ResponseEntity<?> getAllOrders(){
-        Collection<OrderDTO> orderDTOList = orderService.getAllOrders();
-        OrdersDTO allOrders = new OrdersDTO(orderDTOList);
-        return new ResponseEntity<OrdersDTO>(allOrders, HttpStatus.OK);
-    }
 }
