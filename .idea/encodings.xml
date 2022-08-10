@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/WebshopApiGateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customers/customers/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customers/customers/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payments/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payments/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/products/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/products/src/main/resources" charset="UTF-8" />
   </component>

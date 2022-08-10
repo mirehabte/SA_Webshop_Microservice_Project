@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/WebshopApiGateway/pom.xml" />
         <option value="$PROJECT_DIR$/ConfigServer/pom.xml" />
         <option value="$PROJECT_DIR$/products/pom.xml" />
+        <option value="$PROJECT_DIR$/payments/pom.xml" />
       </list>
     </option>
   </component>
