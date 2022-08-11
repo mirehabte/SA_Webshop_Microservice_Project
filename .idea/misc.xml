@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/products2/pom.xml" />
         <option value="$PROJECT_DIR$/ordersCommand/pom.xml" />
         <option value="$PROJECT_DIR$/ordersQuery/pom.xml" />
+        <option value="$PROJECT_DIR$/WebShopRESTClient/pom.xml" />
       </list>
     </option>
   </component>

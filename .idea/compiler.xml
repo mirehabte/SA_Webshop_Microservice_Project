@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="EurekaServer" />
+        <module name="SpringBootServlet" />
         <module name="cloudgateway" />
         <module name="EurekaServer (1)" />
         <module name="payments" />
@@ -14,8 +15,8 @@
         <module name="ordersQuery" />
         <module name="ConfigServer2" />
         <module name="products" />
-        <module name="products (1)" />
         <module name="ordersCommand" />
+        <module name="products (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,6 +30,7 @@
       <module name="payments" target="11" />
       <module name="products" target="11" />
       <module name="products (1)" target="11" />
+      <module name="SpringBootServlet" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -36,6 +38,7 @@
       <module name="ConfigServer2" options="-parameters" />
       <module name="EurekaServer" options="-parameters" />
       <module name="EurekaServer (1)" options="-parameters" />
+      <module name="SpringBootServlet" options="-parameters" />
       <module name="cloudgateway" options="-parameters" />
       <module name="customers" options="-parameters" />
       <module name="ordersCommand" options="-parameters" />
