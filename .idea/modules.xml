@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ConfigServer/ConfigServer2.iml" filepath="$PROJECT_DIR$/ConfigServer/ConfigServer2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EurekaServer/EurekaServer.iml" filepath="$PROJECT_DIR$/EurekaServer/EurekaServer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EurekaServer2/EurekaServer (1).iml" filepath="$PROJECT_DIR$/EurekaServer2/EurekaServer (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Project.iml" filepath="$PROJECT_DIR$/.idea/Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WebShopRESTClient/SpringBootServlet.iml" filepath="$PROJECT_DIR$/WebShopRESTClient/SpringBootServlet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WebshopApiGateway/cloudgateway.iml" filepath="$PROJECT_DIR$/WebshopApiGateway/cloudgateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/customers/customers/customers.iml" filepath="$PROJECT_DIR$/customers/customers/customers.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ordersCommand/ordersCommand.iml" filepath="$PROJECT_DIR$/ordersCommand/ordersCommand.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ordersQuery/ordersQuery.iml" filepath="$PROJECT_DIR$/ordersQuery/ordersQuery.iml" />
-      <module fileurl="file://$PROJECT_DIR$/payments/payments.iml" filepath="$PROJECT_DIR$/payments/payments.iml" />
-      <module fileurl="file://$PROJECT_DIR$/products/products.iml" filepath="$PROJECT_DIR$/products/products.iml" />
-      <module fileurl="file://$PROJECT_DIR$/products2/products (1).iml" filepath="$PROJECT_DIR$/products2/products (1).iml" />
     </modules>
   </component>
 </project>
