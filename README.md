@@ -20,4 +20,9 @@ Store all data of the services in a Mongo database. For this project you can use
 instance for all services. Make sure all services use a different mongo collection. 
 Implement the following supporting services: registry, API gateway, Zipkin and a config 
 server. Make sure we have 2 registry replicas running. 
+Implement the following events: 
+ If we change customer data, the corresponding order(s) data should also change 
+ If we change product data, the corresponding order(s) data should also change 
+ If we change payment data, the corresponding order(s) data should also change 
+
 
