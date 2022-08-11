@@ -40,9 +40,9 @@ public class RestClientApplication implements CommandLineRunner {
 		restTemplate.postForLocation(apiGateway+"/customers", customerDTO1);
 		restTemplate.postForLocation(apiGateway+"/customers", customerDTO2);
 
-//		System.out.println("------------Customers---------");
-//		System.out.println(restTemplate.getForObject(apiGateway+"/customers/12345", CustomerDTO.class));
-//		System.out.println(restTemplate.getForObject(apiGateway+"/customers/12346", CustomerDTO.class));
+		System.out.println("------------Customers---------");
+		System.out.println(restTemplate.getForObject(apiGateway+"/customers/12345", CustomerDTO.class));
+		System.out.println(restTemplate.getForObject(apiGateway+"/customers/12346", CustomerDTO.class));
 
      	//2.Add product
 		Supplier supplier1 = new Supplier("Apple", "apple@org.com");
@@ -52,9 +52,9 @@ public class RestClientApplication implements CommandLineRunner {
 		restTemplate.postForLocation(apiGateway+"/products", productDTO1);
 		restTemplate.postForLocation(apiGateway+"/products", productDTO2);
 
-//		System.out.println("------------Products---------");
-//		System.out.println(restTemplate.getForObject(apiGateway+"/products/123", ProductDTO.class));
-//		System.out.println(restTemplate.getForObject(apiGateway+"/products/124", ProductDTO.class));
+		System.out.println("------------Products---------");
+		System.out.println(restTemplate.getForObject(apiGateway+"/products/123", ProductDTO.class));
+		System.out.println(restTemplate.getForObject(apiGateway+"/products/124", ProductDTO.class));
 
 		//3.Add Order
 		Product product1 = ProductAdapter.getProductFromProductDTO(productDTO1);
@@ -71,9 +71,11 @@ public class RestClientApplication implements CommandLineRunner {
 		PaymentDTO paymentDTO = PaymentAdapter.getPaymentDTOFromPayment(payment);
 
 
+		Thread.sleep(3000);
 		restTemplate.postForLocation(apiGateway+"/payments", paymentDTO);
-		//System.out.println("-------------Payments-----------");
-		//System.out.println(restTemplate.getForObject(apiGateway+"/payments/12378", PaymentDTO.class));
+//		Thread.sleep(3000);
+//		System.out.println("-------------Payments-----------");
+//		System.out.println(restTemplate.getForObject(apiGateway+"/payments/12378", PaymentDTO.class));
 
 		//5.Get Order Before Update
 		System.out.println("-------------Orders Before Updated-----------");
